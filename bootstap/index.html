@@ -9,34 +9,56 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body class ="bg-info text-white">
-        
-    <div class="container text-center mt-5">
-      <h1 class="display-1 mt-3">Full Stack Conf</h1>
-      <p class = "lead mt-5">Coming soon, a one day Conference about all javascript</p>
-    </div>
-    <div class="input-group mb-5 mx-auto w-50 p-3 mt-5">
-        <input type="text" class="form-control" placeholder="Enter your email for info" aria-label="Enter your email for info" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="button-addon2">Sign up</button>
+  <body>
+        <!--Nav bar  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class ="container">
+                <a class="navbar-brand order-1 mr-0" href="https://www.hackyourfuture.net/" target ="_blank">Presented by HYF </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#about">About</a>
+                    <a class="nav-item nav-link" href="#speakers">Speakers</a>
+                    <a class="nav-item nav-link" href="#schedule">Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+         <!-- /Nav bar -->
+
+        <!-- Jumbotron -->
+        <div class="jumbotron jumbotron-fluid bg-info text-white">
+            <div class="container text-sm-center pt-4">
+                <h1 class="display-2">Full Stack Conf</h1>
+                <p class="lead">Coming soon, a one day Conference about all javascript</p>
+                <div class="btn-group" role="group" aria-label="Callout buttons">
+                    <button type="button" class="btn btn-secondary btn-lg">Register Now</button>
+                    <a class="btn btn-light btn-lg" href = "#speakers">See Speakers</a>
+                    
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container pt-4">
-    <!-- about -->
+        <!-- /Jumbotron -->
+       
+    <div class = "container">
+        <!-- about -->
         <div class="row">
-            <div class="col">
+            <div class="col-lg order-lg-2">
                 <h3 class = "mb-4">About Full Stack Conf</h3>
-                <img src="" alt="">
+                <img  class = "mb-4 img-fluid rounded d-none d-sm-block" src="assets/img/pdx.jpg" alt="Portland">
                 <p>The beautiful city of Portland, Oregon will be the host city for Full Stack Conf!</p>
                 <p>Explore the future of JavaScript with a lineup of industry professionals. Discover new techniques to advance your career as a web developer.</p>
             </div>
-            <div class="col">
+            <div class="col-lg order-lg-1">
                 <h3 class="mb-4">Expert Speakers</h3>
                 <p>Our expert speaker lineup was just announced, so don't wait too long before grabbing your tickets!</p>
                 <p>Want to meet the international JavaScript community and share skills with some of the world's top experts, hackers, and makers? Be the first to know what to expect for the future of JavaScript.</p>
                 <p>Full Stack Conf is committed to being inclusive and welcoming for everyone. We look forward to another intensive day of learning and sharing.</p>
             </div>
-            <div class="col">
+            <div class="col-lg order-lg-3">
                 <h3 class="mb-4">What You'll Learn</h3>
                 <ul>
                     <li><strong>MongoDB</strong>: NoSQL database</li>
@@ -48,8 +70,72 @@
                 </ul>
             </div>
         </div>       
-        </div>  <!-- /.about -->
+    </div>  <!-- /about -->
+        
+        <!-- speaker -->
+        <h1 id = "speakers" class="display-4 text-center my-5 text-muted">Speakers</h1>
+        [speakers bio go here]
+        <!-- /speaker -->
+
+        <!-- schedule -->
+        <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
+        [Conference schedule goes here]
+        <!-- /schedule -->
         <!-- /.container -->
+
+        <!-- call out button -->
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out register now!</button>
+        <!-- /call out button -->
+
+        <!-- sign up form -->
+<hr>
+<div class="row p-4 text-muted">
+  <div class="col-md col-xl-5">
+    <p><strong>About Treehouse</strong></p>
+    <p>Treehouse brings affordable technology education to people everywhere to help them achieve their dreams and change the world.</p>
+  </div>
+  <div class="col-md col-xl-5 ml-auto">
+    <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Email">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button">Sign up</button>
+      </span>
+    </div>
+  </div>
+</div>
+<hr><!-- /sign up form -->
+    <!-- footer -->
+    <div class="row py-3">
+        <div class="col-md-7"> 
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tracks</a>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-outline-secondary">Action</button>
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Other Confs</span>
+                        </button>
+                    <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">CSS Conf</a>
+                            <a class="dropdown-item" href="#">Python Conf</a>
+                            <a class="dropdown-item" href="#">Java Conf</a>
+                            <a class="dropdown-item" href="#">Swift</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <div class="col-md text-md-right">
+            <small>&copy; 2019 Full Stack Conf &amp; HYF</small>
+            </div>
+        </div>
+    <!-- /footer -->
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
