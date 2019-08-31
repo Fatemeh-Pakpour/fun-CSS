@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body id = "home" data-spy="scroll" data-target=".navbar" offset ="100">
         <!--Nav bar  -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <div class ="container">
                 <a class="navbar-brand order-1 mr-0" href="https://www.hackyourfuture.net/" target ="_blank">Presented by HYF </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +19,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#about">About</a>
-                    <a class="nav-item nav-link" href="#speakers">Speakers</a>
-                    <a class="nav-item nav-link" href="#schedule">Schedule</a>
+                        <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#about">About</a>
+                        <a class="nav-item nav-link" href="#speakers">Speakers</a>
+                        <a class="nav-item nav-link" href="#schedule">Schedule</a>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <h1 class="display-2">Full Stack Conf</h1>
                 <p class="lead">Coming soon, a one day Conference about all javascript</p>
                 <div class="btn-group" role="group" aria-label="Callout buttons">
-                    <button type="button" class="btn btn-secondary btn-lg">Register Now</button>
+                    <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
                     <a class="btn btn-light btn-lg" href = "#speakers">See Speakers</a>
                     
                 </div>
@@ -45,7 +45,7 @@
        
     <div class = "container">
         <!-- about -->
-        <div class="row">
+        <div  id = "about" class="row">
             <div class="col-lg order-lg-2">
                 <h3 class = "mb-4">About Full Stack Conf</h3>
                 <img  class = "mb-4 img-fluid rounded d-none d-sm-block" src="assets/img/pdx.jpg" alt="Portland">
@@ -137,7 +137,7 @@
 
         <!-- schedule -->
         <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
-        <ul class ="list-group">
+        <ul  id = "schedule" class ="list-group">
             <li class ="list-group-item">
                 <div class ="d-flex justify-content-between"> 
                     <h5 class = "mb-1">Keynote: Internet of things</h5>
@@ -193,7 +193,7 @@
        
 
         <!-- call out button -->
-        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Don't miss out register now!</button>
+        <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5" data-toggle="modal" data-target="#register">Don't miss out register now!</button>
         <!-- /call out button -->
 
         <!-- sign up form -->
@@ -213,7 +213,6 @@
     </div>
   </div>
 </div>
-</div>  <!-- /.container -->
 <hr><!-- /sign up form -->
     <!-- footer -->
     <div class="row py-3">
@@ -246,6 +245,29 @@
             </div>
         </div>
     <!-- /footer -->
+</div>  <!-- /.container -->
+   <!--==========================================
+                 FROM MODEL
+    ============================================-->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register for Full Stack Conf</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
