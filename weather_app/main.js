@@ -119,11 +119,16 @@ function renderLocationOnGoogleMap(lat, lng) {
   console.log(map);
 }
 
-btnWeather.addEventListener("click", () => {
+cityNameInput.addEventListener("keyup", (event) => {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    btnWeather.click();
+  }
   if (cityNameInput.value === "") {
     alert("Enter your city name");
   }
   weatherInfo(cityNameInput.value);
+ 
 });
 btnCurrentLocation.addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition(function(position) {
